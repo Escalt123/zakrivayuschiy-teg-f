@@ -79,35 +79,35 @@
   aspect-ratio: 1 / 1;
 }
 
-.card__img--film {
+.card__img--sepia {
   filter: sepia(0.65) contrast(1.1);
 }
 
-.card__img--water {
+.card__img--low-saturate {
   filter: saturate(0.35) brightness(1.08) contrast(1.05);
 }
 
-.card__img--belfry {
+.card__img--dark-contrast {
   filter: brightness(0.7) contrast(1.3);
 }
 
-.card__img--stone {
+.card__img--grayscale {
   filter: grayscale(1) contrast(1.25);
 }
 
-.card__img--friends {
+.card__img--warm-tone {
   filter: sepia(0.4) saturate(1.5) brightness(1.05);
 }
 
-.card__img--solar {
+.card__img--hue-rotate {
   filter: hue-rotate(35deg) saturate(1.8);
 }
 
-.card__img--cat {
+.card__img--blur {
   filter: blur(1.2px) saturate(0.5) brightness(0.95);
 }
 
-.card__img--wire {
+.card__img--high-contrast {
   filter: contrast(1.45) saturate(0.3) brightness(1.12);
 }
 
@@ -137,18 +137,12 @@
   }
 }
 
-
 .card__text {
   padding: 25px 25px 0;
   font-size: 18px;
   line-height: 21px;
 }
 
-.card__memories-learning {
-  padding: 25px 25px 0;
-  font-size: 18px;
-  line-height: 21px;
-}
 /* ------------ */
 
 
@@ -200,8 +194,12 @@
 }
 
 .card__like-button {
+  padding: 10.5px 35px;
+}
+
+.button {
+  position: relative;
   border: 2px solid var(--border-color);
-  padding: 9px 17px;
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
@@ -210,22 +208,10 @@
   background-color: #fff;
   transition: box-shadow 0.3s ease;
   cursor: pointer;
-  inline-size: 130px;
-  block-size: 38px;
   font-synthesis: none;
 }
 
-.card__like-button,
-.save-diskette__button,
-.dialog__button {
-  position: relative;
-  background-color: #fff;
-  transition: box-shadow 0.3s ease;
-}
-
-.card__like-button::after,
-.save-diskette__button::after,
-.dialog__button::after {
+.button::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -235,23 +221,15 @@
   transform-origin: left center;
 }
 
-/* фокус: убираем штатную обводку, показываем тень */
-.card__like-button:focus,
-.save-diskette__button:focus,
-.dialog__button:focus {
-  box-shadow: 2px 2px 0 0 var(--accent-color);
+.button:focus {
   outline: none;
 }
 
-.card__like-button:focus-visible,
-.save-diskette__button:focus-visible,
-.dialog__button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--accent-color);
 }
 
-.card__like-button:hover::after,
-.save-diskette__button:hover::after,
-.dialog__button:hover::after {
+.button:hover::after{
   transform: scaleX(1);
 }
 
@@ -279,15 +257,11 @@
 
 .save-diskette__button {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 8px;
-  border: 2px solid var(--border-color);
   /* пединг был подобран вручную для большего соответствия с макетом  */
-  padding: 15px 18px 15px 18px;
-  line-height: 90%;
-  background-color: #fff;
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
+  padding: 15px 18px;
 }
 
 /* ------------ */
@@ -336,14 +310,8 @@
   display: flex;
   grid-column: 1 / -1;
   justify-content: center;
-  border: 2px solid var(--border-color);
   padding: 9px 17px;
-  font-family: var(--accent-font);
-  line-height: 90%;
   text-transform: uppercase;
-  background-color: #fff;
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
 }
 
 /* ------------ */
@@ -369,5 +337,4 @@
     width: 28px;
     height: 28px;
   }
-
 }
