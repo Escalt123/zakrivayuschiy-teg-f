@@ -86,12 +86,21 @@
 }
 
 @keyframes heart-like {
-  from { transform: scale(1); }
-  to   { transform: scale(1.25); }
+  from {
+    transform: scale(1);
+  }
+  to { transform: scale(1.25); 
+  }
 }
 
 @keyframes sparks-flash {
-  0%   { opacity: 0; }
-  50%  { opacity: 1; }
-  100% { opacity: 0; }
+  0% { 
+    opacity: 0; 
+  }
+  50% { 
+    opacity: 1; 
+  }
+  100% { 
+    opacity: 0; 
+  }
 }

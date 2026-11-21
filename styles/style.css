@@ -257,10 +257,13 @@
 
 /* иконка дискеты — тоже поверх и тоже с difference */
 .save-diskette__icon {
+  display: block;
   position: relative;
   z-index: 1;
   color: var(--button-text-color);
   mix-blend-mode: difference;
+  width: 21px;
+  height: 21px;
 }
 
 /* ------------ */
@@ -277,21 +280,13 @@
   display: flex;
   align-items: center;
   gap: 8px;
-
   /* пединг был подобран вручную для большего соответствия с макетом  */
-  padding: 15px 18px 15px 18px; 
-
+  padding: 15px 18px 15px 18px;
   line-height: 90%;
   background-color: #fff;
   border: 2px solid var(--border-color);
   cursor: pointer;
   transition: box-shadow 0.3s ease;
-}
-
-.save-diskette__icon {
-  display: block;
-  width: 21px;
-  height: 21px;
 }
 
 /* ------------ */
