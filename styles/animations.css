@@ -68,13 +68,13 @@
 
 .like-icon.is-liked .contour {
   fill: var(--animation-fill-color);
-  transition-duration: 0.3s;
   transition-delay: 0.06s;
+  transition-duration: 0.3s;
 }
 
 .heart {
-  transform-box: fill-box;
   transform-origin: center;
+  transform-box: fill-box;
 }
 
 .like-icon.is-liked .heart {
