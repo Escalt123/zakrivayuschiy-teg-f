@@ -229,7 +229,7 @@
   box-shadow: 2px 2px 0 0 var(--accent-color);
 }
 
-.button:hover::after{
+.button:hover::after {
   transform: scaleX(1);
 }
 
